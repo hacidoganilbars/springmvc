@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+"http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+
+<tiles-definitions>
+
+	<definition name="masterTemplate"
+		template="/WEB-INF/views/templates/masterTemplate.jsp">
+		<put-attribute name="content" value=""></put-attribute>
+	</definition>
+	
+	<definition name="home.index" extends="masterTemplate">
+		<put-attribute name="content"
+			value="/WEB-INF/views/home/index.jsp"></put-attribute>
+	</definition>
+
+	<!-- Define About Us Template -->
+	<definition name="aboutus.index" extends="masterTemplate">
+		<put-attribute name="content">
+			<definition name="aboutUsTemplate"
+				template="/WEB-INF/views/templates/aboutUsTemplate.jsp">
+				<put-attribute name="aboutUsContent"
+					value="/WEB-INF/views/aboutus/index.jsp"></put-attribute>
+			</definition>
+		</put-attribute>
+	</definition>
+
+	<definition name="aboutus.about1" extends="masterTemplate">
+		<put-attribute name="content">
+			<definition extends="aboutUsTepmlate">
+				<put-attribute name="aboutUsContent"
+					value="/WEB-INF/views/aboutus/about1.jsp"></put-attribute>
+			</definition>
+		</put-attribute>
+	</definition>
+
+	<definition name="aboutus.about2" extends="masterTemplate">
+		<put-attribute name="content">
+			<definition extends="aboutUsTepmlate">
+				<put-attribute name="aboutUsContent"
+					value="/WEB-INF/views/aboutus/about2.jsp"></put-attribute>
+			</definition>
+		</put-attribute>
+	</definition>
+
+
+
+	<!-- Define News Template -->
+	<definition name="news.index" extends="masterTemplate">
+		<put-attribute name="content">
+			<definition name="newsTemplate"
+				template="/WEB-INF/views/templates/newsTemplate.jsp">
+				<put-attribute name="newsContent"
+					value="/WEB-INF/views/news/index.jsp"></put-attribute>
+			</definition>
+		</put-attribute>
+	</definition>
+
+	<definition name="news.news1" extends="masterTemplate">
+		<put-attribute name="content">
+			<definition extends="newsTemplate">
+				<put-attribute name="newsContent"
+					value="/WEB-INF/views/news/news1.jsp"></put-attribute>
+			</definition>
+		</put-attribute>
+	</definition>
+
+	<definition name="news.news2" extends="masterTemplate">
+		<put-attribute name="content">
+			<definition extends="newsTemplate">
+				<put-attribute name="newsContent"
+					value="/WEB-INF/views/news/news2.jsp"></put-attribute>
+			</definition>
+		</put-attribute>
+	</definition>
+
+	<definition name="news.news3" extends="masterTemplate">
+		<put-attribute name="content">
+			<definition extends="newsTemplate">
+				<put-attribute name="newsContent"
+					value="/WEB-INF/views/news/news3.jsp"></put-attribute>
+			</definition>
+		</put-attribute>
+	</definition>
+
+
+</tiles-definitions>
